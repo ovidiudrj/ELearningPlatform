@@ -10,5 +10,4 @@
         public ICollection<Course> TaughtCourses { get; set; } = new List<Course>();
         public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
     }
-
 }
