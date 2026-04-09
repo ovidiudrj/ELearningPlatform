@@ -1,0 +1,21 @@
+<div style="padding: 20px; font-family: sans-serif;">
+    <h2>📚 Lista de Cursuri</h2>
+
+    @if (courses.length > 0) {
+    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+
+        @for (course of courses; track course.id) {
+        <div
+            style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 250px; background-color: #f9f9f9;">
+            <h3 style="margin-top: 0; color: #0056b3;">{{ course.title }}</h3>
+            <p>{{ course.description }}</p>
+            <hr>
+            <small style="color: gray;">ID Profesor: {{ course.teacherId }}</small>
+        </div>
+        }
+
+    </div>
+    } @else {
+    <p>Se încarcă cursurile sau nu există niciun curs în baza de date...</p>
+    }
+</div>
